@@ -1,0 +1,81 @@
+{
+    "SimpleTodo": {
+        "entityTypes": {
+            "List": {
+                "shape": {
+                    "type": "Record",
+                    "attributes": {
+                        "owner": {
+                            "type": "EntityOrCommon",
+                            "name": "User"
+                        }
+                    }
+                }
+            },
+            "Task": {
+                "shape": {
+                    "type": "Record",
+                    "attributes": {
+                        "belongs_to": {
+                            "type": "EntityOrCommon",
+                            "name": "List"
+                        }
+                    }
+                }
+            },
+            "User": {}
+        },
+        "actions": {
+            "createList": {
+                "appliesTo": {
+                    "resourceTypes": [
+                        "List"
+                    ],
+                    "principalTypes": [
+                        "User"
+                    ]
+                }
+            },
+            "createTask": {
+                "appliesTo": {
+                    "resourceTypes": [
+                        "List"
+                    ],
+                    "principalTypes": [
+                        "User"
+                    ]
+                }
+            },
+            "deleteTask": {
+                "appliesTo": {
+                    "resourceTypes": [
+                        "Task"
+                    ],
+                    "principalTypes": [
+                        "User"
+                    ]
+                }
+            },
+            "updateTask": {
+                "appliesTo": {
+                    "resourceTypes": [
+                        "Task"
+                    ],
+                    "principalTypes": [
+                        "User"
+                    ]
+                }
+            },
+            "viewTask": {
+                "appliesTo": {
+                    "resourceTypes": [
+                        "Task"
+                    ],
+                    "principalTypes": [
+                        "User"
+                    ]
+                }
+            }
+        }
+    }
+}

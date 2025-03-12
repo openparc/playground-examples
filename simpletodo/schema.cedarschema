@@ -1,0 +1,36 @@
+namespace SimpleTodo {
+    entity List {
+        owner: User
+    };
+
+    entity Task {
+        belongs_to: List
+    };
+
+    entity User;
+    action "createList" appliesTo {
+        principal: [User],
+        resource: [List],
+        context: {}
+    };
+    action "createTask" appliesTo {
+        principal: [User],
+        resource: [List],
+        context: {}
+    };
+    action "deleteTask" appliesTo {
+        principal: [User],
+        resource: [Task],
+        context: {}
+    };
+    action "updateTask" appliesTo {
+        principal: [User],
+        resource: [Task],
+        context: {}
+    };
+    action "viewTask" appliesTo {
+        principal: [User],
+        resource: [Task],
+        context: {}
+    };
+}

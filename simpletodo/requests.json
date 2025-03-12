@@ -1,0 +1,26 @@
+[
+    {
+        "principal": "SimpleTodo::User::\"john\"",
+        "action": "SimpleTodo::Action::\"viewTask\"",
+        "resource": "SimpleTodo::Task::\"task1\"",
+        "context": {}
+    },
+    {
+        "principal": "SimpleTodo::User::\"harry\"",
+        "action": "SimpleTodo::Action::\"deleteTask\"",
+        "resource": "SimpleTodo::Task::\"task1\"",
+        "context": {}
+    },
+    {
+        "principal": "SimpleTodo::User::\"harry\"",
+        "action": "SimpleTodo::Action::\"createTask\"",
+        "resource": "SimpleTodo::List::\"johns_wish_list\"",
+        "context": {}
+    },
+    {
+        "principal": "SimpleTodo::User::\"harry\"",
+        "action": "SimpleTodo::Action::\"createList\"",
+        "resource": "SimpleTodo::List::\"harrys_reading_list\"",
+        "context": {}
+    }
+]

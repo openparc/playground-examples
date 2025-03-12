@@ -1,0 +1,40 @@
+[
+    {
+        "uid": {
+            "type": "SimpleTodo::User",
+            "id": "john"
+        },
+        "attrs": {},
+        "parents": []
+    },
+    {
+        "uid": {
+            "type": "SimpleTodo::List",
+            "id": "johns_wish_list"
+        },
+        "attrs": {
+            "owner": {
+                "__entity": {
+                    "type": "SimpleTodo::User",
+                    "id": "john"
+                }
+            }
+        },
+        "parents": []
+    },
+    {
+        "uid": {
+            "type": "SimpleTodo::Task",
+            "id": "task1"
+        },
+        "attrs": {
+            "belongs_to": {
+                "__entity": {
+                    "type": "SimpleTodo::List",
+                    "id": "johns_wish_list"
+                }
+            }
+        },
+        "parents": []
+    }
+]
